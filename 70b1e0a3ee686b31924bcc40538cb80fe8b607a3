@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5afe65bd_6eb0638c",
+        "filename": "gps/gps.conf",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 6351
+      },
+      "writtenOn": "2013-09-23T06:24:31Z",
+      "side": 1,
+      "message": "Are we even using this gps.conf?  I would have expected a diff int full_dlx.mk to install it instead of the one in device/common/gps?",
+      "revId": "70b1e0a3ee686b31924bcc40538cb80fe8b607a3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
