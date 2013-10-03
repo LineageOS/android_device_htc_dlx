@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da37b569_b9ffaa33",
+        "filename": "rootdir/etc/init.dlx.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 7472
+      },
+      "writtenOn": "2013-10-03T08:20:28Z",
+      "side": 1,
+      "message": "I don\u0027t think you need the lines below - There does not seem to be a /data/secure/data/ in this RC file otherwise",
+      "revId": "d2b193c4180a0c325942b8d4a992f3c359e864fa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
