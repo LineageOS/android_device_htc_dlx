@@ -250,7 +250,7 @@ int gr_text(int x, int y, const char *s)
     return x;
 }
 
-void gr_texticon(int x, int y, gr_surface icon) {
+void gr_texticon(int x, int y, gr_surface icon, 0) {
     if (gr_context == NULL || icon == NULL) {
         return;
     }
