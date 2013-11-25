@@ -100,6 +100,15 @@ WIFI_DRIVER_FW_PATH_STA := "/system/etc/firmware/fw_bcm4334.bin"
 WIFI_DRIVER_FW_PATH_AP := "/system/etc/firmware/fw_bcm4334_apsta.bin"
 WIFI_DRIVER_FW_PATH_P2P := "/system/etc/firmware/fw_bcm4334_p2p.bin"
 
+# SELinux
+BOARD_SEPOLICY_DIRS := \
+    device/htc/dlx/sepolicy
+
+BOARD_SEPOLICY_UNION := \
+    app.te \
+    device.te \
+    file_contexts
+
 # Filesystem
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16777216
