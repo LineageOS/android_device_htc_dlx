@@ -16,6 +16,24 @@
       "revId": "8c31f02c96e8a0dad1504d48801e3bd5e0000cac",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa80f949_7225cdc0",
+        "filename": "system.prop",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 6351
+      },
+      "writtenOn": "2013-12-04T13:04:20Z",
+      "side": 0,
+      "message": "I was trying to keep us matched up with the M7 since it makes any future changes easier.",
+      "parentUuid": "fa80f949_12f32175",
+      "revId": "8c31f02c96e8a0dad1504d48801e3bd5e0000cac",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
