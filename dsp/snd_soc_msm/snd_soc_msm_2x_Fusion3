@@ -1638,7 +1638,7 @@ SectionDevice
 	DisableSequence
 	EndSequence
 
-	ACDBID  0:2
+	ACDBID  20:2
 EndSection
 
 SectionDevice
@@ -2046,7 +2046,7 @@ SectionDevice
 		'SLIM_0_RX Channels':0:One
 		'RX1 MIX1 INP1':0:RX1
 		'RX1 MIX1 INP2':0:RX6
-		'RX1 Digital Volume':1:67
+		'RX1 Digital Volume':1:56
 		'EAR PA Gain':0:POS_2_DB
 		'DAC1 Switch':1:1
 		'SLIM TX3 MUX':0:RMIX1
