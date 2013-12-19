@@ -289,7 +289,6 @@ static int dsp_set_param(int fd, uint8_t module_id,
 
     error = tfa9887_write(fd, TFA9887_CF_MEM, data, num_bytes);
 
-#if 0
     if (error == 0) {
         cf_ctrl |= (1 << 8) | (1 << 4); /* set the cf_req1 and cf_int bit */
         error = tfa9887_write_reg(fd, TFA9887_CF_CONTROLS, cf_ctrl);
@@ -305,12 +304,14 @@ static int dsp_set_param(int fd, uint8_t module_id,
         if (tries >= 100) {
             /* something wrong with communication with DSP */
             ALOGE("%s: Timed out waiting for status", __func__);
+#if 1
+	    ALOGW("%s: Ignoring this error\n", __func__);
+	    error = 0;
+#else
             error = -1;
+#endif
         }
     }
-#endif
-
-    usleep(10000);
 
     cf_ctrl = 0x0002;
     cf_mad = 0x0000;
@@ -328,7 +329,7 @@ static int dsp_set_param(int fd, uint8_t module_id,
             rpc_status = (int)((mem[0] << 16) | (mem[1] << 8) | mem[2]);
             tries++;
             usleep(1000);
-        } while (rpc_status != 0 && tries < 100);
+        } while (rpc_status != 0 && tries < 10);
     }
     if (error == 0) {
         if (rpc_status != STATUS_OK) {
@@ -385,6 +386,26 @@ static int tfa9887_load_dsp(int fd, const char *param_file) {
 
 load_dsp_err:
     return error;
+}
+
+static struct {
+    uint8_t reg;
+    uint16_t value;
+} bypass[3] = {
+	{0x04, 0x880B},
+	{0x09, 0x0619},
+	{0x09, 0x0618}
+};
+
+
+static int tfa9887_dsp_bypass(int fd) {
+    for (int i=0; i <3 ; i++) {
+	int ret = tfa9887_write_reg(fd, bypass[i].reg, bypass[i].value);
+	if (ret) {
+	    return ret;
+	}
+    }
+    return 0;
 }
 
 static int tfa9887_power(int fd, int on) {
@@ -720,8 +741,7 @@ static int tfa9887_init(int fd, int sample_rate) {
     int channel;
     unsigned int pll_lock_bits = (TFA9887_STATUS_CLKS | TFA9887_STATUS_PLLS);
 
-    channel = 0;
-//    channel = 1;
+    channel = 2;
     patch_file = PATCH_R;
     speaker_file = SPKR_R;
 
@@ -764,13 +784,16 @@ static int tfa9887_init(int fd, int sample_rate) {
         goto priv_init_err;
     }
 
-/*
     error = tfa9887_wait_ready(fd, pll_lock_bits, pll_lock_bits);
     if (error != 0) {
         ALOGE("Failed to lock PLLs");
+#if 1
+        ALOGW("%s: Ignoring this error\n", __func__);
+        error = 0;
+#else
         goto priv_init_err;
+#endif
     }
-*/
 
     usleep(10000);
 
@@ -877,8 +900,16 @@ int tfa9887_set_mode(audio_mode_t mode) {
         goto set_mode_unlock;
     }
 
-    /* Mute to avoid pop */
-    ret = tfa9887_mute(tfa9887_fd, Tfa9887_Mute_Digital);
+    if (!tfa9887_initialized) {
+	ret = tfa9887_dsp_bypass(tfa9887_fd);
+        if (ret != 0) {
+            ALOGE("Failed set dsp_bypass, ret = %d", ret);
+            goto set_mode_unlock;
+	}
+    } else {
+        /* Mute to avoid pop */
+        ret = tfa9887_mute(tfa9887_fd, Tfa9887_Mute_Digital);
+    }
 
     /* Enable DSP if necessary */
     reg_value[0] = 1;
