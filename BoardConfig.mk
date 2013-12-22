@@ -49,7 +49,7 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=dlx user_debug=0
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01800000
 TARGET_KERNEL_CONFIG := cyanogenmod_dlx_defconfig
-TARGET_KERNEL_SOURCE := kernel/htc/m7
+TARGET_KERNEL_SOURCE := kernel/htc/msm8960
 
 # Audio
 BOARD_USES_FLUENCE_INCALL := true
