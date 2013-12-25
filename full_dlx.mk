@@ -169,6 +169,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Torch
 
+# Dexopt system to /cache
+PRODUCT_PROPERTY_OVERRIDES += dalvik.vm.dexopt-data-only=0
+
 # We have enough space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
