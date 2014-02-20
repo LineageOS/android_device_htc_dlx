@@ -65,9 +65,9 @@ case "$target" in
         echo 1026000 > /sys/devices/system/cpu/cpufreq/ondemand/sync_freq
         echo 1134000 > /sys/devices/system/cpu/cpufreq/ondemand/input_boost
         echo 80 > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold_any_cpu_load
-        chown system /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate
-        chown system /sys/devices/system/cpu/cpufreq/ondemand/sampling_down_factor
-        chown system /sys/devices/system/cpu/cpufreq/ondemand/io_is_busy
+        chown -h system /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate
+        chown -h system /sys/devices/system/cpu/cpufreq/ondemand/sampling_down_factor
+        chown -h system /sys/devices/system/cpu/cpufreq/ondemand/io_is_busy
         echo 20 > /sys/module/cpu_boost/parameters/boost_ms
         echo 1566000 > /sys/module/cpu_boost/parameters/sync_threshold
         echo 1134000 > /sys/module/cpu_boost/parameters/input_boost_freq
@@ -78,46 +78,46 @@ case "$target" in
         echo 384000 > /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
         echo 384000 > /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
         # echo 1 > /sys/devices/system/cpu/cpufreq/interactive/io_is_busy
-        # chown system /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay
-        # chown system /sys/devices/system/cpu/cpufreq/interactive/boost
-        # chown system /sys/devices/system/cpu/cpufreq/interactive/boostpulse
-        # chown system /sys/devices/system/cpu/cpufreq/interactive/boostpulse_duration
-        # chown system /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load
-        # chown system /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
-        # chown system /sys/devices/system/cpu/cpufreq/interactive/io_is_busy
-        # chown system /sys/devices/system/cpu/cpufreq/interactive/min_sample_time
-        # chown system /sys/devices/system/cpu/cpufreq/interactive/target_loads
-        # chown system /sys/devices/system/cpu/cpufreq/interactive/timer_rate
-        # chown system /sys/devices/system/cpu/cpufreq/interactive/timer_slack
-        chown system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-        chown system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-        chown system /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq
-        chown system /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
-        chown system /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq
-        chown system /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
-        chown system /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq
-        chown system /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
+        # chown -h system /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay
+        # chown -h system /sys/devices/system/cpu/cpufreq/interactive/boost
+        # chown -h system /sys/devices/system/cpu/cpufreq/interactive/boostpulse
+        # chown -h system /sys/devices/system/cpu/cpufreq/interactive/boostpulse_duration
+        # chown -h system /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load
+        # chown -h system /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
+        # chown -h system /sys/devices/system/cpu/cpufreq/interactive/io_is_busy
+        # chown -h system /sys/devices/system/cpu/cpufreq/interactive/min_sample_time
+        # chown -h system /sys/devices/system/cpu/cpufreq/interactive/target_loads
+        # chown -h system /sys/devices/system/cpu/cpufreq/interactive/timer_rate
+        # chown -h system /sys/devices/system/cpu/cpufreq/interactive/timer_slack
+        chown -h system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+        chown -h system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+        chown -h system /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq
+        chown -h system /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
+        chown -h system /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq
+        chown -h system /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
+        chown -h system /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq
+        chown -h system /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
         echo 1 > /sys/module/msm_thermal/core_control/enabled
-        chown root.system /sys/devices/system/cpu/mfreq
-        chmod 220 /sys/devices/system/cpu/mfreq
-        chown root.system /sys/devices/system/cpu/cpu1/online
-        chown root.system /sys/devices/system/cpu/cpu2/online
-        chown root.system /sys/devices/system/cpu/cpu3/online
-        chmod 664 /sys/devices/system/cpu/cpu1/online
-        chmod 664 /sys/devices/system/cpu/cpu2/online
-        chmod 664 /sys/devices/system/cpu/cpu3/online
-        chmod 664 /sys/power/pnpmgr/apps/media_mode
-        chown media.system /sys/power/pnpmgr/apps/media_mode
-        chown system /sys/power/pnpmgr/apps/activity_trigger
-        chown system /sys/power/perflock
-        chown system /sys/power/launch_event
-        chown system /sys/power/powersave
-        chown system /sys/power/cpufreq_ceiling
-        chown system /sys/power/cpunum_floor
-        chown system /sys/power/cpunum_ceiling
+        chown -h root.system /sys/devices/system/cpu/mfreq
+        chmod -h 220 /sys/devices/system/cpu/mfreq
+        chown -h root.system /sys/devices/system/cpu/cpu1/online
+        chown -h root.system /sys/devices/system/cpu/cpu2/online
+        chown -h root.system /sys/devices/system/cpu/cpu3/online
+        chmod -h 664 /sys/devices/system/cpu/cpu1/online
+        chmod -h 664 /sys/devices/system/cpu/cpu2/online
+        chmod -h 664 /sys/devices/system/cpu/cpu3/online
+        chmod -h 664 /sys/power/pnpmgr/apps/media_mode
+        chown -h media.system /sys/power/pnpmgr/apps/media_mode
+        chown -h system /sys/power/pnpmgr/apps/activity_trigger
+        chown -h system /sys/power/perflock
+        chown -h system /sys/power/launch_event
+        chown -h system /sys/power/powersave
+        chown -h system /sys/power/cpufreq_ceiling
+        chown -h system /sys/power/cpunum_floor
+        chown -h system /sys/power/cpunum_ceiling
         echo 1 > /sys/module/rmnet_usb/parameters/rmnet_data_init
         # Allow QMUX daemon to assign port open wait time
-        chown radio.radio /sys/devices/virtual/hsicctl/hsicctl0/modem_wait
+        chown -h radio.radio /sys/devices/virtual/hsicctl/hsicctl0/modem_wait
         # Wake on volume
         echo 1 > /sys/keyboard/vol_wakeup
     ;;

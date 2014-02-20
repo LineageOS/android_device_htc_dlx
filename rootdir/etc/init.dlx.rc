@@ -79,19 +79,19 @@ on fs
 on boot  
     #Create QMUX deamon socket area
     mkdir /dev/socket/qmux_radio 0770 radio radio
-    chmod 2770 /dev/socket/qmux_radio
+    chmod -h 2770 /dev/socket/qmux_radio
     mkdir /dev/socket/qmux_audio 0770 media audio
-    chmod 2770 /dev/socket/qmux_audio
+    chmod -h 2770 /dev/socket/qmux_audio
     mkdir /dev/socket/qmux_bluetooth 0770 bluetooth bluetooth
-    chmod 2770 /dev/socket/qmux_bluetooth
+    chmod -h 2770 /dev/socket/qmux_bluetooth
 
     # Allow QMUX daemon to assign port open wait time
-    chown radio radio /sys/devices/virtual/hsicctl/hsicctl0/modem_wait
+    chown -h radio radio /sys/devices/virtual/hsicctl/hsicctl0/modem_wait
 
     #Remove SUID bit for iproute2 ip tool
-    chmod 0755 /system/bin/ip
+    chmod -h 0755 /system/bin/ip
 
-    chmod 0444 /sys/devices/platform/msm_hsusb/gadget/usb_state
+    chmod -h 0444 /sys/devices/platform/msm_hsusb/gadget/usb_state
 
     write /proc/sys/net/ipv6/conf/p2p0/disable_ipv6 1
 
@@ -99,32 +99,32 @@ on boot
     symlink /dev/graphics/fb1 /dev/graphics/hdmi
 
     # Remove write permissions to video related nodes
-    chmod 0664 /sys/devices/virtual/graphics/fb1/hpd
-    chmod 0664 /sys/devices/virtual/graphics/fb1/video_mode
-    chmod 0664 /sys/devices/virtual/graphics/fb1/format_3d
+    chmod -h 0664 /sys/devices/virtual/graphics/fb1/hpd
+    chmod -h 0664 /sys/devices/virtual/graphics/fb1/video_mode
+    chmod -h 0664 /sys/devices/virtual/graphics/fb1/format_3d
 
     # Change owner and group for media server and surface flinger
-    chown system system /sys/devices/virtual/graphics/fb1/format_3d
-    chown system system /sys/devices/virtual/graphics/fb1/hpd
+    chown -h system system /sys/devices/virtual/graphics/fb1/format_3d
+    chown -h system system /sys/devices/virtual/graphics/fb1/hpd
     
     start qcamerasvr
 
     # 4.3 requires this
-    chmod 0644 /proc/cmdline
+    chmod -h 0644 /proc/cmdline
 
     # bluetooth
-    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
-    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
-    chmod 0660 /sys/class/rfkill/rfkill0/state
+    chown -h bluetooth bluetooth /sys/class/rfkill/rfkill0/type
+    chown -h bluetooth bluetooth /sys/class/rfkill/rfkill0/state
+    chmod -h 0660 /sys/class/rfkill/rfkill0/state
 
     # bluetooth MAC address programming
-    chown bluetooth bluetooth /sys/module/htc_bdaddress/parameters/bdaddress
+    chown -h bluetooth bluetooth /sys/module/htc_bdaddress/parameters/bdaddress
     setprop ro.bt.bdaddr_path /sys/module/htc_bdaddress/parameters/bdaddress
 
-    chmod 660 /dev/rtc0
-    chown system system /dev/rtc0
+    chmod -h 660 /dev/rtc0
+    chown -h system system /dev/rtc0
 
-    chown root system /proc/net/ip_conntrack
+    chown -h root system /proc/net/ip_conntrack
 
     # Enable DEBUG_SUSPEND, DEBUG_EXIT_SUSPEND, and DEBUG_WAKEUP
     write /sys/module/wakelock/parameters/debug_mask 7
@@ -152,19 +152,19 @@ on boot
     mkdir /data/nfc/param 770 nfc nfc
 
     # liblights
-    chown system system /sys/class/leds/green/brightness
-    chown system system /sys/class/leds/green/blink
-    chown system system /sys/class/leds/green/off_timer
-    chown system system /sys/class/leds/amber/brightness
-    chown system system /sys/class/leds/amber/blink
-    chown system system /sys/class/leds/amber/off_timer
-    chown system system /sys/class/leds/button-backlight/brightness
-    chown system system /sys/class/leds/button-backlight/currents
-    chown system system /sys/class/leds/lcd-backlight/brightness  
-    	
+    chown -h system system /sys/class/leds/green/brightness
+    chown -h system system /sys/class/leds/green/blink
+    chown -h system system /sys/class/leds/green/off_timer
+    chown -h system system /sys/class/leds/amber/brightness
+    chown -h system system /sys/class/leds/amber/blink
+    chown -h system system /sys/class/leds/amber/off_timer
+    chown -h system system /sys/class/leds/button-backlight/brightness
+    chown -h system system /sys/class/leds/button-backlight/currents
+    chown -h system system /sys/class/leds/lcd-backlight/brightness
+
     # permissions for NFC
-    chmod 0600 /dev/pn544
-    chown nfc nfc /dev/pn544
+    chmod -h 0600 /dev/pn544
+    chown -h nfc nfc /dev/pn544
     setprop debug.nfc.fw_download "true"
     setprop debug.nfc.fw_boot_download "false"
 
@@ -176,7 +176,7 @@ on boot
 
     # GPS
     mkdir /dev/socket/qmux_gps 0770 gps gps
-    chmod 2770 /dev/socket/qmux_gps
+    chmod -h 2770 /dev/socket/qmux_gps
 
     #Create directories for Location services
     mkdir /data/misc/location 0770 gps gps
@@ -186,34 +186,34 @@ on boot
     mkdir /data/misc/gpsone_d 0770 system gps
 
     # Audio
-    chown system audio /dev/tfa9887
-    chmod 0664 /dev/tfa9887
+    chown -h system audio /dev/tfa9887
+    chmod -h 0664 /dev/tfa9887
 
     # For Flashlight Restriction
-    chown system system /sys/camera_led_status/led_hotspot_status
-    chown radio system /sys/camera_led_status/led_ril_status
+    chown -h system system /sys/camera_led_status/led_hotspot_status
+    chown -h radio system /sys/camera_led_status/led_ril_status
 
     # For camera to switch burst mode
-    chown media media /sys/devices/platform/msm_sdcc.1/burst
-    chown media media /proc/emmc_burst
+    chown -h media media /sys/devices/platform/msm_sdcc.1/burst
+    chown -h media media /proc/emmc_burst
 
     # HTC SSD Camera
-    chown media system /sys/camera_htccallback/htccallback
-    chown media system /sys/camera_attrs/videochat
+    chown -h media system /sys/camera_htccallback/htccallback
+    chown -h media system /sys/camera_attrs/videochat
 
     # flashlight
-    chown system system /sys/class/leds/flashlight/brightness
-    chmod 0666          /sys/class/leds/flashlight/brightness
+    chown -h system system /sys/class/leds/flashlight/brightness
+    chmod -h 0666          /sys/class/leds/flashlight/brightness
 
     # HTC SSD USB
-    chown system system /sys/class/android_usb/f_modem/on
-    chown system system /sys/class/android_usb/f_diag/on
-    chown system system /sys/class/android_usb/f_rmnet/on
+    chown -h system system /sys/class/android_usb/f_modem/on
+    chown -h system system /sys/class/android_usb/f_diag/on
+    chown -h system system /sys/class/android_usb/f_rmnet/on
 
     # low charge current in voice call
-    chown radio radio /sys/class/power_supply/battery/phone_call
-    chown radio radio /sys/class/power_supply/battery/network_search
-    chown system system /sys/class/power_supply/battery/navigation
+    chown -h radio radio /sys/class/power_supply/battery/phone_call
+    chown -h radio radio /sys/class/power_supply/battery/network_search
+    chown -h system system /sys/class/power_supply/battery/navigation
 
     # Flash storage isn't a good entropy source, and only causes locking
     # overhead in the kernel. Turn it off.
@@ -221,7 +221,7 @@ on boot
 
 on post-fs-data
     mkdir /data/audio 0775 media audio
-    chmod 2775 /data/audio
+    chmod -h 2775 /data/audio
     mkdir /data/media 0770 media_rw media_rw
 
     mkdir /data/misc/wifi 0770 wifi wifi
@@ -234,35 +234,35 @@ on post-fs-data
     mkdir /data/misc/audio 0770 audio audio
 
     # Mounting of persist is moved to 'on emmc-fs' and 'on fs' sections
-    chmod 0664 /sys/devices/platform/msm_sdcc.1/polling
-    chmod 0664 /sys/devices/platform/msm_sdcc.2/polling
-    chmod 0664 /sys/devices/platform/msm_sdcc.3/polling
-    chmod 0664 /sys/devices/platform/msm_sdcc.4/polling
+    chmod -h 0664 /sys/devices/platform/msm_sdcc.1/polling
+    chmod -h 0664 /sys/devices/platform/msm_sdcc.2/polling
+    chmod -h 0664 /sys/devices/platform/msm_sdcc.3/polling
+    chmod -h 0664 /sys/devices/platform/msm_sdcc.4/polling
 
     # Chown polling nodes as needed from UI running on system server
-    chown system system /sys/devices/platform/msm_sdcc.1/polling
-    chown system system /sys/devices/platform/msm_sdcc.2/polling
+    chown -h system system /sys/devices/platform/msm_sdcc.1/polling
+    chown -h system system /sys/devices/platform/msm_sdcc.2/polling
     # Change owner and group for media server
-    #chown system system /sys/devices/virtual/graphics/fb1/format_3d
-    chown system system /sys/devices/platform/msm_sdcc.3/polling
-    chown system system /sys/devices/platform/msm_sdcc.4/polling
+    #chown -h system system /sys/devices/virtual/graphics/fb1/format_3d
+    chown -h system system /sys/devices/platform/msm_sdcc.3/polling
+    chown -h system system /sys/devices/platform/msm_sdcc.4/polling
 
     #Create directory used by sensor subsystem(dsps)
     mkdir /data/system/sensors
-    chmod 665 /data/system/sensors
+    chmod -h 665 /data/system/sensors
     write /data/system/sensors/settings 1
-    chmod 660 /data/system/sensors/settings
+    chmod -h 660 /data/system/sensors/settings
 
     # AKM setting data
     mkdir /data/misc/sensors
-    chmod 775 /data/misc/sensors
+    chmod -h 775 /data/misc/sensors
 
     #Provide the access to hostapd.conf only to root and group
-    chmod 0660 /data/hostapd/hostapd.conf
+    chmod -h 0660 /data/hostapd/hostapd.conf
 
     # double check perms and set owner
-    chown root root /devlog
-    chmod 0700 /devlog
+    chown -h root root /devlog
+    chmod -h 0700 /devlog
 
     #Mpdecision state
     mkdir /data/mpdecision 0660 system system
