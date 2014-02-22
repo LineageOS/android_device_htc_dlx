@@ -76,3 +76,4 @@ mm.enable.smoothstreaming=true
 # CWMR Options
 ro.cwm.forbid_format=/devlog,/reserve
 ro.cwm.forbid_mount=/devlog,/reserve
+dalvik.vm.dexopt-data-only=0
