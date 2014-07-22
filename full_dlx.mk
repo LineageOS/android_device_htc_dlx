@@ -134,6 +134,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	camera.msm8960
 
+# F2FS
+PRODUCT_PACKAGES += \
+        fibmap.f2fs \
+        fsck.f2fs \
+        mkfs.f2fs
+
 # GPS
 PRODUCT_PACKAGES += \
         libloc_adapter \
