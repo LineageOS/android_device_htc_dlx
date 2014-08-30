@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a1b2928_8e519a65",
+        "filename": "rootdir/etc/fstab.dlx",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-08-30T04:18:23Z",
+      "side": 1,
+      "message": "whitespace!",
+      "revId": "50e703c7abf93b066b4f2ce10c7270bf14c82394",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
