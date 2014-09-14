@@ -108,6 +108,8 @@ BOARD_VOLD_MAX_PARTITIONS := 36
 
 # Charge mode
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/htc_lpm/lpm_mode
+BOARD_ALLOW_SUSPEND_IN_CHARGER := true
+BOARD_CHARGER_RES := device/htc/dlx/recovery/res/images/charger
 
 # Added for Clockworkmod
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
