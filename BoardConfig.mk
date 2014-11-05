@@ -110,10 +110,11 @@ BOARD_VOLD_MAX_PARTITIONS := 36
 # Charge mode
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/htc_lpm/lpm_mode
 
-# Added for Clockworkmod
-TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
+# Custom Recovery
+TARGET_RECOVERY_FSTAB := device/htc/dlx/rootdir/etc/fstab.dlx
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
-TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_RECOVERY_SWIPE := true
-TARGET_RECOVERY_FSTAB := device/htc/dlx/rootdir/etc/fstab.dlx
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_RECOVERY_DEVICE_DIRS += device/htc/dlx
