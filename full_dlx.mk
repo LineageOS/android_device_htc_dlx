@@ -39,16 +39,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/init.post_boot.sh:system/etc/init.post_boot.sh
 
 # Recovery
-PRODUCT_PACKAGES += \
-    lpm.rc \
-    choice_fn \
-    detect_key \
-    power_test \
-    chargeled \
-    offmode_charging \
-    offmode_charging_res_images \
-    offmode_charging_warn_res_images \
-    init.recovery.dlx.rc
+COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 
 PRODUCT_PACKAGES += \
     libnetcmdiface
