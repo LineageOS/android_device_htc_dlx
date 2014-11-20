@@ -725,12 +725,12 @@ struct loc_eng_msg_atl_open_success : public loc_eng_msg {
     const AGpsStatusValue agpsType;
     const int length;
     char* const apn;
-    const AGpsBearerType bearerType;
+    const ApnIpType bearerType;
     inline loc_eng_msg_atl_open_success(void* instance,
                                         AGpsStatusValue atype,
                                         const char* name,
                                         int len,
-                                        AGpsBearerType btype) :
+                                        ApnIpType btype) :
         loc_eng_msg(instance, LOC_ENG_MSG_ATL_OPEN_SUCCESS),
         agpsType(atype), length(len),
         apn(new char[len+1]), bearerType(btype)
@@ -948,16 +948,6 @@ struct ulp_msg_report_quipc_position : public loc_eng_msg {
     }
 };
 #endif
-
-struct loc_eng_msg_privacy : public loc_eng_msg {
-    const int8_t privacy_setting;
-    inline loc_eng_msg_privacy(void* instance, int8_t privacy_setting) :
-        loc_eng_msg(instance, LOC_ENG_MSG_PRIVACY),
-        privacy_setting(privacy_setting)
-        {
-            LOC_LOGV("privacy_setting: %d", privacy_setting);
-        }
-};
 
 void loc_eng_msg_sender(void* loc_eng_data_p, void* msg);
 int loc_eng_msgget(int * p_req_msgq);
