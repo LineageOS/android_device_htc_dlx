@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dab17558_854e92bf",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 3
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-11-20T21:46:42Z",
+      "side": 1,
+      "message": "As far as I can tell you don\u0027t need this, libWVphoneAPI or libdrmclearkeyplugin",
+      "revId": "d8a72c0981b7a5f78a1e8b5cc72396c27b3a3982",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
