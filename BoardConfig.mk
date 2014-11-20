@@ -80,6 +80,9 @@ BOARD_BLUETOOTH_USES_HCIATTACH_PROPERTY := false
 # Use libril in the device tree
 BOARD_PROVIDES_LIBRIL := true
 
+# Logging
+TARGET_USES_LOGD := false
+
 # USB
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
