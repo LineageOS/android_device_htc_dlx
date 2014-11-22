@@ -1,0 +1,18 @@
+allow qcks mdm_dev:chr_file { read getattr open ioctl };
+allow qcks mdm_helper_exec:file getattr;
+allow qcks self:capability dac_override;
+
+allow qcks cgroup:dir { create add_name };
+allow qcks default_prop:property_service set;
+allow qcks init:unix_stream_socket connectto;
+allow qcks mmc_block_device:blk_file rw_file_perms;
+allow qcks mdm_helper_exec:file { read execute open execute_no_trans };
+allow qcks property_socket:sock_file write;
+allow qcks qcks_tmpfs:file { create unlink open getattr setattr };
+allow qcks shell_exec:file { read execute open execute_no_trans };
+allow qcks sysfs_wake_lock:file { read write open };
+allow qcks system_file:file execute_no_trans;
+allow qcks tmpfs:dir { write remove_name add_name };
+allow qcks tty_dev:chr_file { read write getattr open ioctl };
+allow qcks vfat:dir search;
+allow qcks vfat:file { read getattr open };
