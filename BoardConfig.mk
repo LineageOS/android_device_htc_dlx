@@ -80,6 +80,18 @@ BOARD_BLUETOOTH_USES_HCIATTACH_PROPERTY := false
 # Use libril in the device tree
 BOARD_PROVIDES_LIBRIL := true
 
+# SELinux
+BOARD_SEPOLICY_DIRS += device/htc/dlx/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+    akmd.te \
+    file_contexts \
+    hcheck.te \
+    kickstart.te \
+    qrngd.te \
+    sysinit.te \
+    thermald.te
+
 # USB
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
