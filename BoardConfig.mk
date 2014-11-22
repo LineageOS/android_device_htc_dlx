@@ -46,7 +46,7 @@ BOARD_EGL_CFG := device/htc/dlx/configs/egl.cfg
 #Kernel
 BOARD_KERNEL_BASE := 0x80600000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=dlx user_debug=0
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=dlx user_debug=0 androidboot.selinux=permissive
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01800000
 TARGET_KERNEL_CONFIG := cyanogenmod_dlx_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/m7
@@ -79,6 +79,33 @@ BOARD_BLUETOOTH_USES_HCIATTACH_PROPERTY := false
 
 # Use libril in the device tree
 BOARD_PROVIDES_LIBRIL := true
+
+# SELinux
+include device/qcom/sepolicy/sepolicy.mk
+BOARD_SEPOLICY_DIRS += device/htc/dlx/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+    akmd.te \
+    device.te \
+    drmserver.te \
+    file_contexts \
+    hcheck.te \
+    init.te \
+    init_shell.te \
+    kickstart.te \
+    mediaserver.te \
+    mm-qcamerad.te \
+    mpdecision.te \
+    netmgrd.te \
+    qcks.te \
+    qmuxd.te \
+    surfaceflinger.te \
+    system_server.te \
+    tee.te \
+    thermald.te \
+    ueventd.te \
+    vold.te \
+    wpa.te
 
 # USB
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
