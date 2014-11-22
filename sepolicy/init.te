@@ -1,0 +1,3 @@
+allow init su_exec:file execute_no_trans;
+allow init_shell vfat:dir search;
+#FIXME allow init system_file:dir create;

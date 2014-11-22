@@ -1,0 +1,6 @@
+allow mediaserver default_prop:property_service set;
+allow mediaserver self:netlink_kobject_uevent_socket { read bind create setopt getopt };
+allow mediaserver system_data_file:sock_file write;
+allow mediaserver system_server:unix_stream_socket { read write };
+allow mediaserver amp_dev:chr_file { read write open };
+allow mediaserver camera_device:chr_device { ioctl open read write };

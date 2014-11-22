@@ -1,0 +1,1 @@
+allow wpa rfkill_dev:chr_file { read open };
