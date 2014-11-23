@@ -4,4 +4,6 @@
 /system/bin/qcks		u:object_r:qcks_exec:s0
 /system/bin/akmd		u:object_r:akmd_exec:s0
 /system/bin/hcheck		u:object_r:hcheck_exec:s0
-# FIXME /system/bin/su			u:object_r:su_exec:s0
+
+/dev/mdm			u:object_r:mdm_dev:s0
+/dev/tfa9887			u:object_r:amp_dev:s0
