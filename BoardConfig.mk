@@ -85,12 +85,25 @@ BOARD_SEPOLICY_DIRS += device/htc/dlx/sepolicy
 
 BOARD_SEPOLICY_UNION += \
     akmd.te \
+    device.te \
+    drmserver.te \
     file_contexts \
     hcheck.te \
+    init.te \
+    init_shell.te \
     kickstart.te \
+    mediaserver.te \
+    mm-qcamerad \
+    mpdecision.te \
+    netmgrd.te \
+    qcks.te \
+    qmuxd.te \
     qrngd.te \
+    surfaceflinger.te \
     sysinit.te \
-    thermald.te
+    tee.te \
+    thermald.te \
+    ueventd.te
 
 # USB
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
