@@ -1,0 +1,2 @@
+type mdm_dev, dev_type;
+type amp_dev, dev_type;
