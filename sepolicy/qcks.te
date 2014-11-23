@@ -1,0 +1,3 @@
+allow qcks mdm_dev:chr_file { read getattr open ioctl };
+allow qcks mdm_helper_exec:file getattr;
+allow qcks self:capability dac_override;

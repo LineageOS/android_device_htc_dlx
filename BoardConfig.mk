@@ -85,11 +85,18 @@ BOARD_SEPOLICY_DIRS += device/htc/dlx/sepolicy
 
 BOARD_SEPOLICY_UNION += \
     akmd.te \
+    device.te \
     file_contexts \
     hcheck.te \
+    init.te \
+    init_shell.te \
     kickstart.te \
+    netmgrd.te \
+    qcks.te \
+    qmuxd.te \
     qrngd.te \
     sysinit.te \
+    tee.te \
     thermald.te
 
 # USB
