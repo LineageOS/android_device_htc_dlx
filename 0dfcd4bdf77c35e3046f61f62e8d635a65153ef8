@@ -16,6 +16,24 @@
       "revId": "0dfcd4bdf77c35e3046f61f62e8d635a65153ef8",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bab6814e_1acafaa1",
+        "filename": "overlay/frameworks/base/core/res/res/values/config.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 6351
+      },
+      "writtenOn": "2014-11-26T09:53:19Z",
+      "side": 1,
+      "message": "Yes, I agree!\n\nI have no idea where most of this came from (probably copied from some other device and never looked over).",
+      "parentUuid": "bab6814e_3ada5e79",
+      "revId": "0dfcd4bdf77c35e3046f61f62e8d635a65153ef8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
