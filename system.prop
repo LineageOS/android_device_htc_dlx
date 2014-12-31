@@ -1,5 +1,9 @@
 # system.prop for dlx
 
+# Audio
+lpa.decode=true
+media.stagefright.use-awesome=true
+
 # Display
 debug.mdpcomp.maxlayer=3
 ro.hdmi.enable=true
