@@ -1,3 +1,4 @@
 allow recovery self:capability sys_boot;
 
 allow recovery input_device:chr_file write;
+allow recovery self:netlink_kobject_uevent_socket { bind create read setopt };
