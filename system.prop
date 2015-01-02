@@ -53,14 +53,6 @@ ro.com.google.clientidbase.yt=android-verizon
 ro.com.google.clientidbase.am=android-verizon
 ro.com.google.clientidbase.gmm=android-htc
 ro.com.google.clientidbase.ms=android-verizon
-gsm.sim.operator.alpha = Verizon
-gsm.sim.operator.numeric = 311480
-gsm.sim.operator.iso-country = us
-gsm.operator.alpha = Verizon
-gsm.operator.numeric = 311480
-gsm.operator.iso-country = us
-ro.cdma.home.operator.alpha = Verizon
-ro.cdma.home.operator.numeric = 311480
 ro.cdma.data_retry_config=max_retries=infinite,0,0,60000,120000,480000,900000
 ro.ril.set.mtusize=1428
 persist.radio.snapshot_enabled=1
