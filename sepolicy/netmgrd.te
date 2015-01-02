@@ -1,1 +1,2 @@
+allow netmgrd self:packet_socket { bind create read };
 allow netmgrd self:process execmem;
