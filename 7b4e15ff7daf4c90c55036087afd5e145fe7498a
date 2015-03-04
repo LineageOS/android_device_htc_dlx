@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ad45d7e_d317b752",
+        "filename": "rootdir/etc/init.dlx.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 347,
+      "author": {
+        "id": 10921
+      },
+      "writtenOn": "2015-03-04T13:30:14Z",
+      "side": 1,
+      "message": "http://review.cyanogenmod.org/#/c/90033/ needs to be ported to kernel_htc_m7 for this to work.",
+      "revId": "7b4e15ff7daf4c90c55036087afd5e145fe7498a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
