@@ -268,6 +268,9 @@ on post-fs-data
     # Set indication (checked by vold) that we have finished this action
     setprop vold.post_fs_data_done 1
 
+    # BFQ
+    write /sys/block/mmcblk0/queue/iosched/slice_idle 0
+
 service thermald /system/bin/thermald
 	class core
 	user root
