@@ -242,7 +242,7 @@
     <integer name="config_safe_media_volume_index">7</integer>
 
     <!-- Flag indicating if the speed up audio on mt call code should be executed -->
-    <bool name="config_speed_up_audio_on_mt_calls">true</bool>
+    <!--bool name="config_speed_up_audio_on_mt_calls">true</bool-->
 
     <!-- Enable Wifi Display / Miracast Support. -->
     <bool name="config_enableWifiDisplay">true</bool>
