@@ -132,6 +132,10 @@ PRODUCT_PACKAGES += \
     Tag \
     com.android.nfc_extras
 
+# SSL Compat
+PRODUCT_PACKAGES += \
+    libboringssl-compat
+
 # We have enough space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
