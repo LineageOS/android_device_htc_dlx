@@ -19,7 +19,7 @@ include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 
-LOCAL_SHARED_LIBRARIES := liblog libcutils libgui libbinder libutils
+LOCAL_SHARED_LIBRARIES := liblog libcutils libgui libbinder libutils libsimbl
 
 LOCAL_SRC_FILES := \
     htc_camera.c
