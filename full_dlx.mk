@@ -119,7 +119,8 @@ PRODUCT_PACKAGES += \
 
 # HTC Symbols
 PRODUCT_PACKAGES += \
-        libhtc_symbols
+        libhtc_symbols \
+        libsimbl
 
 # NFC
 PRODUCT_PACKAGES += \
