@@ -16,7 +16,9 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := \
-    htc_log.c
+    htc_log.c \
+    memory_pmem.c \
+    vector_impl.c
 
 LOCAL_MODULE := libhtc_symbols
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
