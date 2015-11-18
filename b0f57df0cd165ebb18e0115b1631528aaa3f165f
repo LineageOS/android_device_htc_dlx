@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ff5d4b2f_59c28feb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 3671
+      },
+      "writtenOn": "2015-11-18T04:22:26Z",
+      "side": 1,
+      "message": "typo: shim the **fuck** out of the camera hal to get it loading",
+      "revId": "b0f57df0cd165ebb18e0115b1631528aaa3f165f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
