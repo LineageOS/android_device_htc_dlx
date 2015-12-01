@@ -115,10 +115,6 @@ PRODUCT_PACKAGES += \
         libgps.utils \
         gps.msm8960
 
-# HTC Symbols
-PRODUCT_PACKAGES += \
-        libhtc_symbols
-
 # NFC
 PRODUCT_PACKAGES += \
     nfc.msm8960 \
@@ -131,6 +127,7 @@ PRODUCT_PACKAGES += \
 
 # Shims
 PRODUCT_PACKAGES += \
+    libshim_log \
     libshim_qcopt
 
 # We have enough space to hold precise GC data
