@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3fce034c_05bfd3fb",
+        "filename": "ril/telephony/java/com/android/internal/telephony/dlxRIL.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 5530
+      },
+      "writtenOn": "2016-01-07T21:35:26Z",
+      "side": 1,
+      "message": "One?",
+      "range": {
+        "startLine": 24,
+        "startChar": 25,
+        "endLine": 24,
+        "endChar": 28
+      },
+      "revId": "ccb08c7b03dcfb73cf9ff4876f05264064dddcbc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
