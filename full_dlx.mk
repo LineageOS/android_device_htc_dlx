@@ -104,6 +104,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+	Snap \
 	camera.msm8960 \
 	libshim_camera
 
