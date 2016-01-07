@@ -22,6 +22,30 @@
       "revId": "ccb08c7b03dcfb73cf9ff4876f05264064dddcbc",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3fce034c_c536abb5",
+        "filename": "ril/telephony/java/com/android/internal/telephony/dlxRIL.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 3671
+      },
+      "writtenOn": "2016-01-07T21:36:57Z",
+      "side": 1,
+      "message": "sed -i fail xD",
+      "parentUuid": "3fce034c_05bfd3fb",
+      "range": {
+        "startLine": 24,
+        "startChar": 25,
+        "endLine": 24,
+        "endChar": 28
+      },
+      "revId": "ccb08c7b03dcfb73cf9ff4876f05264064dddcbc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
