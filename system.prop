@@ -1,5 +1,13 @@
 # system.prop for dlx
 
+# Audio
+persist.audio.fluence.mode=endfire
+persist.audio.vr.enable=false
+persist.audio.handset.mic=digital
+persist.audio.speaker.location=high
+qcom.hw.aac.encoder=true
+ro.qc.sdk.audio.fluencetype=fluence
+
 # Display
 debug.mdpcomp.maxlayer=3
 ro.hdmi.enable=true
